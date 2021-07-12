@@ -20,10 +20,10 @@ if [ -z "$2" ]; then
   exit 1
 fi
 
-ticket_prefix=$1 # ENG-123
-description=$2 # Fix duplication bug
+ticket_prefix=$1                                                            # ENG-123
+description=$2                                                              # Fix duplication bug
 kebab_name=$(echo "$description" | tr '[:upper:]' '[:lower:]' | tr ' ' '-') # fix-duplication-bug
-commit_messeage="${ticket_prefix} ${description}" # ENG-123 Fix duplication bug
+commit_messeage="${ticket_prefix} ${description}"                           # ENG-123 Fix duplication bug
 
 git checkout -b "$ticket_prefix"-"$kebab_name"
 git add .
